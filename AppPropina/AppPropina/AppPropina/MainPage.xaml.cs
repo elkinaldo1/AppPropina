@@ -21,13 +21,13 @@ namespace AppPropina
             var propina = decimal.Parse(entPropina.Text);
             var numpersonas = decimal.Parse(entNumPersona.Text);
 
-            var totalPropina = total * propina;
-            var totalC = total + totalPropina;
+            var totalPropina = ((total * propina)/100);
+            var totalCuenta = total + totalPropina;
 
             txtPropina.Detail = (totalPropina).ToString("C");
-            txtTotal.Detail = (totalC).ToString("C");
+            txtTotal.Detail = (totalCuenta).ToString("C");
             txtPropinaPersona.Detail = (totalPropina / numpersonas).ToString("C");
-            txtTotalPropina.Detail = (totalC / numpersonas).ToString("C");            
+            txtTotalPropina.Detail = (totalCuenta / numpersonas).ToString("C");            
         }
     }
 }
